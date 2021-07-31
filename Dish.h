@@ -11,6 +11,9 @@ class Dish{
     public:
         void setIngr();
         void setName(string);
+        void update(string);
+        void printIngr();
+        void printName();
     private:
        vector<string> ingr;
        string name;
