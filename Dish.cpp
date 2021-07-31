@@ -10,6 +10,10 @@ void Dish :: setName(string input){
     name = input;
 }
 
+void Dish :: printName(){
+    cout << name << " - ";
+}
+
 void Dish:: setIngr(){
     ifstream ingrList;
     ingrList.open("ingredients.txt");
@@ -27,11 +31,48 @@ void Dish:: setIngr(){
         ingrList >> first;
     }
 
-    char character;
-    string ingredient;
+    string ingredient = "";
 
-    for(int i = 0; i < foodList.size(); i++){
+    int i = 0;
 
+    // finds end of dinner name
+    while(foodList.at(i) != '-'){
+        i ++;
     }
 
+    i = i+2; // accounts for the space after the - and the first letter of the first ingredient
+
+    char character;
+    // creates ingredient vector
+    for(i=i; i < foodList.size(); i++){
+        character = foodList.at(i);
+
+        if(character == ','){
+            ingr.push_back(ingredient);
+            ingredient = "";
+            i = i+1;
+        }
+        else{
+            ingredient = ingredient + character;
+        }
+    }
+    //pushes final ingredient not followed by a comma
+    ingr.push_back(ingredient);
 }
+
+void Dish :: printIngr(){
+    int i;
+    for(i = 0; i < ingr.size(); i++){
+        cout << ingr.at(i) << ", ";
+    }
+}
+
+void Dish :: update(string allergy){
+    for(int i = 0; i < ingr.size(); i++){
+        if(ingr.at(i) == allergy){
+            // remove element from vector
+        }
+    }
+}
+
+
