@@ -37,15 +37,33 @@ int main(){
     cout << "Let's pick your meal plan for the week!" << endl;
     printMenu();
 
-    for(int i = 0; i < 4; i++){
-        cout << "What is your choise for day " << i << "?" << endl;
+    for(int i = 1; i < 4; i++){
+        cout << "What is your choice for day " << i << "?" << endl;
         getline(cin, choice);
         Dish plate;
         
-        plate.setName(choice);
-        plate.setIngr();
+//         plate.setName(choice);
+//         plate.setIngr();
         
         picks.push_back(plate);
+    }
+    
+    string answer;
+    cout << "Do you have any food allergies? Y/N" << endl;
+    cin >> answer;
+
+    while(answer == "Y"){
+        string allergies;
+        cout << "What is your allergy?" << endl;
+        cin >> allergies;
+
+        int j;
+        for(j = 0; j < picks.size(); j++){
+            picks.at(j).update(allergies);
+        }
+
+        cout << "Do you have another allergy? Y/N" << endl;
+        cin >> answer;
     }
     
 
