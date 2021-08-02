@@ -66,6 +66,13 @@ int main(){
         cin >> answer;
     }
     
+    cout << "Here's your menu for the week: " << endl;
+    for(int k = 0; k < picks.size(); k++){
+        picks.at(k).printName();
+        picks.at(k).printIngr();
+        cout << endl;
+    }
+    
 
     return 0;
 }
