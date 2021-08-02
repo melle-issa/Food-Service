@@ -1,3 +1,7 @@
 Grilled Cheese - white bread, American Cheese
 Spaghetti - pasta, beef, tomatoes, herbs
 Chicken Dinner - chicken, salt, pepper
+Tomato Soup - tomatoes, butter, salt, pepper, onion
+Pizza - cheese, dough, tomato sauce, pepperoni
+Mac N Cheese - elbow pasta, cheese, butter, milk
+Fish Dinner - salmon, lemon, salt, pepper
