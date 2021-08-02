@@ -36,6 +36,7 @@ int main(){
     string choice;
     cout << "Let's pick your meal plan for the week!" << endl;
     printMenu();
+    cout << endl;
 
     for(int i = 1; i < 6; i++){
         cout << "What is your choice for day " << i << "?" << endl;
@@ -54,7 +55,7 @@ int main(){
 
     while(answer == "Y"){
         string allergies;
-        cout << "What is your allergy?" << endl;
+        cout << "What is your allergy? (please ender in all lower case)" << endl;
         cin >> allergies;
 
         int j;
