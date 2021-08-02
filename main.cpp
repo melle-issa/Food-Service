@@ -37,7 +37,7 @@ int main(){
     cout << "Let's pick your meal plan for the week!" << endl;
     printMenu();
 
-    for(int i = 1; i < 4; i++){
+    for(int i = 1; i < 6; i++){
         cout << "What is your choice for day " << i << "?" << endl;
         getline(cin, choice);
         Dish plate;
