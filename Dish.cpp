@@ -70,7 +70,14 @@ void Dish :: printIngr(){
 void Dish :: update(string allergy){
     for(int i = 0; i < ingr.size(); i++){
         if(ingr.at(i) == allergy){
-            // remove element from vector
+            for(int j = i; j < ingr.size()-1; j++){
+                string temp = ingr.at(j+1);
+                ingr.at(j+1) = allergy;
+                ingr.at(j) = temp;
+            }
+
+            ingr.pop_back();
+            break;
         }
     }
 }
